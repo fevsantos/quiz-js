@@ -50,8 +50,8 @@ class PagesController < ApplicationController
           instance_variable_get("@op#{(n * 4) + 1}"),
           instance_variable_get("@op#{(n * 4) + 2}"),
           instance_variable_get("@op#{(n * 4) + 3}")
-      ]
-    }
+        ]
+      }
     end
   end
 end
