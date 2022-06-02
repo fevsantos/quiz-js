@@ -3,33 +3,12 @@
 <div class='mt-8 ml-5'>
 <div class="javateste">
 <%=@questionsr%></div>
+<%# <%= javascript_tag "setBanana(#{@questionsr.to_json});" %> %>
 <script>
-
-let questions = '<%=@questionsr%>'
-// document.querySelector(".javateste").innerText
-// questions.forEach((question)=>{
-//   console.log(question)
-// }
-// )
-// {
-//   numb: 1,
-//   question: '<%=@questions[0]%>',
-//   answer: '<%=@resposta[0]%>',
-//   options: [ '<%=@primeira_opção%>',
-//   '<%=@segunda_opção%>',
-//   '<%=@terceira_opção%>'
-//   ]
-// },
-// {
-//   numb: 2,
-//   question: '<%=@questions[1]%>',
-//   answer: '<%=@resposta[1]%>',
-//   options: [ '<%=@quarta_opção%>',
-//   '<%=@quinta_opção%>',
-//   '<%=@sexta_opção%>'
-//   ]
-console.log(typeof(questions))
+  let questions = JSON.parse('<%= raw(@questionsr.to_json) %>')
+    console.log(questions)
 </script>
+
 <div class="start_btn"><button>Start Quiz</button></div>
 <!-- Info Box -->
 <div class="info_box">
